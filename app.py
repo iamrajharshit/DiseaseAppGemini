@@ -257,7 +257,7 @@ if selected == "Parkinsons Prediction":
     
     user_parkinsons_diagnosis = f''
 
-    Parkinsons_prompt=""
+    Parkinsons_prompt="The person medical report with data, Average vocal fundamental frequency={fo}, Maximum vocal fundamental frequency={fhi},Minimum vocal fundamental frequency={flo},Three nonlinear measures of fundamental frequency variation PPE={PPE} spread1={spread1} spread2={spread2},Two nonlinear dynamical complexity measures={D2} RPDE={RPDE},MDVP:Jitter(Abs)={Jitter_Abs}"
    
     if st.button("Parkinson's Test Result"):
 
