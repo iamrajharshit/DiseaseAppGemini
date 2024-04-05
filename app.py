@@ -17,7 +17,7 @@ def ask_order(message,Profile_prompt):
     chat = model.start_chat(history=[])
     # we can add pre prompt
     response=chat.send_message(Profile_prompt) #first we share the profile
-    response=chat.send_message(message+"create a report",generation_config=genai.types.GenerationConfig(candidate_count=1,
+    response=chat.send_message(message,generation_config=genai.types.GenerationConfig(candidate_count=1,
                                                                                         temperature=0.3))
     return response.text
 ###################################################################################################
@@ -105,7 +105,7 @@ if selected == 'Diabetes Prediction':
 
     st.success(diab_diagnosis)
     st.title('Report')
-    st.code(ask_order(diab_diagnosis,user_diab_prompt))
+    st.markdown(ask_order(diab_diagnosis,user_diab_prompt))
     
 
 # Heart Disease Prediction Page
