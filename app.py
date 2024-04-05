@@ -104,8 +104,8 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'The person is not diabetic'
 
     st.success(diab_diagnosis)
-    st.write('Report')
-    st.write(ask_order(diab_diagnosis,user_diab_prompt))
+    st.title('Report')
+    st.code(ask_order(diab_diagnosis,user_diab_prompt))
     
 
 # Heart Disease Prediction Page
@@ -177,7 +177,7 @@ if selected == 'Heart Disease Prediction':
             heart_diagnosis = 'The person does not have any heart disease'
 
     st.success(heart_diagnosis)
-    st.write('Report')
+    st.title('Report')
     st.markdown(ask_order(heart_diagnosis,User_Heart_prompt)) #llm reply
 
 # Parkinson's Prediction Page
@@ -279,7 +279,7 @@ if selected == "Parkinsons Prediction":
 
     st.success(parkinsons_diagnosis)
     #added chat bot
-    st.write('Report')
+    st.title('Report')
     st.markdown(ask_order(parkinsons_diagnosis,user_parkinsons_diagnosis))
 
     
