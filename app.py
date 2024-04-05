@@ -2,10 +2,13 @@ import os
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+from dotenv import load_dotenv
+load_dotenv()
+key = os.getenv("Api_key")
 #LLM part#############################################################################################
 import google.generativeai as genai
 def ask_order(message,Profile_prompt):
-    genai.configure(api_key='AIzaSyAGeRBVMqNq7JLoquFye7Zp1GbC05_Ries')
+    genai.configure(api_key=key)
     model = genai.GenerativeModel('gemini-pro',safety_settings=[
         {"category":'HARM_CATEGORY_HARASSMENT',
                             "threshold":'BLOCK_NONE'},
