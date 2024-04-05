@@ -280,7 +280,7 @@ if selected == "Parkinsons Prediction":
     st.success(parkinsons_diagnosis)
     #added chat bot
     st.write('Report')
-    st.markdown(ask_order(parkinsons_diagnosis))
+    st.markdown(ask_order(parkinsons_diagnosis,user_parkinsons_diagnosis))
 
     
 #chat convo part
