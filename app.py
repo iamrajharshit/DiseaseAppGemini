@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from dotenv import load_dotenv
 load_dotenv()
-key = os.getenv("Api_key")
+key = os.getenv("API_KEY")
 #LLM part#############################################################################################
 import google.generativeai as genai
 def ask_order(message,Profile_prompt):
